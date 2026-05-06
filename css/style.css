@@ -1,8 +1,11 @@
 body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 20px;
-    padding: 0;
+    margin: 0;
+    color: #373737;
+}
+* {
+    box-sizing: border-box;
 }
 h1 {
     font-size: 2.5em;
@@ -10,14 +13,6 @@ h1 {
 }
 h2 {
     font-size: 2em;
-    font-style: italic;
-    text-decoration: underline;
-}
-p {
-    color: #6d058d; 
-    font-style: italic; 
-    background-color: #e0d4f7;
-    padding: 20px;
 }
 .highlight {
     text-decoration: underline; 
@@ -42,4 +37,33 @@ p {
     background-color: #f2f2f2;
     color: #373737;
     text-decoration: none;
+}
+.banner {
+    background-color: #da9999;
+    padding: 20px;
+    text-align: center;
+    color: #373737;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.content {
+    float: left;
+    width: 70%;
+    padding: 20px;
+}
+.sidebar {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    border-left: #373737  1px solid;
+}
+.footer {
+    background-color: #373737;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    font-size: small;
 }
