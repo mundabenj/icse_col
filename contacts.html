@@ -49,8 +49,12 @@
 
         <label for="website">Website URL: </label><br>
         <input type="url" id="website" name="website" placeholder="Enter your website URL" required><br><br>
-        <input type="search" placeholder="Search..." required><br><br>
-        <input type="file" placeholder="Choose a file" accept=".pdf" multiple required><br><br>
+
+        <label for="search">Search our database: </label><br>
+        <input type="search" id="search" name="search" placeholder="Search..." required><br><br>
+        
+        <label for="file">Upload File: </label><br>
+        <input type="file" id="file" name="file" placeholder="Choose a file" accept=".pdf" multiple required><br><br>
 
             <input type="radio" name="ratings" value="1" required> 1
             <input type="radio" name="ratings" value="2" required> 2
@@ -58,8 +62,8 @@
             <input type="radio" name="ratings" value="4" required> 4
             <input type="radio" name="ratings" value="5" required> 5<br><br>
 
-        <input type="checkbox" name="Subscribe" value="bbit"> Subscribe to BBIT newsletter<br><br>
-        <input type="checkbox" name="Subscribe" value="bics"> Subscribe to BISC newsletter<br><br>
+        <input type="checkbox" id="subscribe_bbit" name="Subscribe" value="bbit"> <label for="subscribe_bbit">Subscribe to BBIT newsletter</label><br><br>
+        <input type="checkbox" id="subscribe_bics" name="Subscribe" value="bics"> <label for="subscribe_bics">Subscribe to BISC newsletter</label><br><br>
 
         <select name="country" required>
             <option value="">Select your country</option>
@@ -70,7 +74,8 @@
             <option value="south_sudan">South Sudan</option>
         </select><br><br>
 
-        <textarea name="message" placeholder="Enter your message here..." required></textarea><br><br>
+        <label for="message">Message: </label><br>
+        <textarea id="message" name="message" placeholder="Enter your message here..." required></textarea><br><br>
 
         <input type="submit" value="Update Message"><br><br>
         <button type="submit">Send Message</button><br><br>
