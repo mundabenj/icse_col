@@ -21,7 +21,7 @@
     <div class="content">
     <h2>Contact Us</h2>
 
-    <form action="">
+    <form action="" method="post" class="contact-form">
 
         <label for="full_name">Full Name: </label><br>
         <input type="text" id="full_name" name="full_name" placeholder="Enter your name" required><br><br>
@@ -32,68 +32,21 @@
         <label for="phone">Phone Number: </label><br>
         <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
 
-        <label for="password">Password: </label><br>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
-
-        <label for="dob">Date of Birth: </label><br>
-        <input type="date" id="dob" name="dob" placeholder="Enter your date of birth" required><br><br>
-
-        <label for="contact_time">Contact Time: </label><br>
-        <input type="time" id="contact_time" name="contact_time" placeholder="Enter your contact time" required><br><br>
-
-        <label for="favorite_color">Favorite Color: </label><br>
-        <input type="color" id="favorite_color" name="favorite_color" placeholder="Choose your favorite color" required><br><br>
-
-        <label for="range">Range: </label><br>
-        <input type="range" id="range" name="range" placeholder="Choose your range" required><br><br>
-
-        <label for="website">Website URL: </label><br>
-        <input type="url" id="website" name="website" placeholder="Enter your website URL" required><br><br>
-
-        <label for="search">Search our database: </label><br>
-        <input type="search" id="search" name="search" placeholder="Search..." required><br><br>
-        
-        <label for="file">Upload File: </label><br>
-        <input type="file" id="file" name="file" placeholder="Choose a file" accept=".pdf" multiple required><br><br>
-
-            <input type="radio" name="ratings" value="1" required> 1
-            <input type="radio" name="ratings" value="2" required> 2
-            <input type="radio" name="ratings" value="3" required> 3
-            <input type="radio" name="ratings" value="4" required> 4
-            <input type="radio" name="ratings" value="5" required> 5<br><br>
-
-        <input type="checkbox" id="subscribe_bbit" name="Subscribe" value="bbit"> <label for="subscribe_bbit">Subscribe to BBIT newsletter</label><br><br>
-        <input type="checkbox" id="subscribe_bics" name="Subscribe" value="bics"> <label for="subscribe_bics">Subscribe to BISC newsletter</label><br><br>
-
-        <select name="country" required>
-            <option value="">Select your country</option>
-            <option value="kenya">Kenya</option>
-            <option value="uganda">Uganda</option>
-            <option value="tanzania">Tanzania</option>
-            <option value="rwanda">Rwanda</option>
-            <option value="south_sudan">South Sudan</option>
+        <label for="subject">Subject: </label><br>
+        <select>
+            <option value="general">General Inquiry</option>
+            <option value="eLearning Support">eLearning Support</option>
+            <option value="technical Support">Technical Support</option>
+            <option value="AMS Support">AMS Support</option>
+            <option value="feedback">Feedback</option>
         </select><br><br>
 
         <label for="message">Message: </label><br>
-        <textarea id="message" name="message" placeholder="Enter your message here..." required></textarea><br><br>
+        <textarea id="message" name="message" placeholder="Enter your message here" required></textarea><br><br>
 
-        <input type="submit" value="Update Message"><br><br>
-        <button type="submit">Send Message</button><br><br>
-        <input type="reset" value="Reset Form"><br><br>
+        <input type="submit" value="Submit">
     </form>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
-    <p>If you have any questions or inquiries, please feel free to reach out to us through the following contact information:</p>
-    <ul>
-        <li>Email: <a href="mailto:support@icse.com">support@icse.com</a></li>
-        <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
-        <li>Address: 123 Mada, Nairobi, Kenya</li>
-    </ul>
     </div>
     <div class="sidebar">
         <h2>Our Offices</h2>
