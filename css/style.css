@@ -38,6 +38,9 @@ h2 {
     color: #373737;
     text-decoration: none;
 }
+.toplinks-right {
+    float: right;
+}
 .banner {
     background-color: #d6d6d6;
     padding: 20px;
