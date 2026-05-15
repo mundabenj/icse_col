@@ -63,7 +63,7 @@ h2 {
     padding: 20px;
     background-color: #f2f2f2;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .content, .sidebar {
         width: 100%;
         float: none;
