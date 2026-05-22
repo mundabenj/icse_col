@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+</head>
+<body onload="startTime()">
+    <p id="demo"></p>
+    
+    <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
+    <br>
+    <script>
+        document.write(7 + 5);
+    </script>
+<br>
+
+    <button type="button" onclick="document.getElementById('bulb').src='images/bulb_on.webp'">Turn on</button>
+    
+    <img id="bulb" src="images/bulb_off.webp" alt="" style="width: 300px;">
+    
+    <button type="button" onclick="document.getElementById('bulb').src='images/bulb_off.webp'">Turn off</button>
+
+<br>
+
+<script>
+    // window.alert("The database connection was successful!");
+</script>
+<br>
+<a href="#" onclick="return confirm('Are you sure you want to delete Alex from the database?')">[ Delete ]</a>
+<br>
+
+<script>
+    console.log(5+7);
+</script>
+<br>
+
+<script>
+    let x = 5;
+    let y = 7;
+    let z = x + y;
+    document.write("The sum is : " + z);
+
+    var fullname = "Alex Okama";
+    let age = 30;
+    document.write("<br>My name is " + fullname + " and I am " + age + " years old.");
+
+    let score = 85; // score is initialized to 85
+    score += 10; // score = score + 10
+    document.write("<br>My new score is: " + score);
+
+
+    const marks = 29; // marks is a constant and cannot be reassigned
+    // marks += 1; // This will cause an error because marks is a constant
+    document.write("<br>My marks are: " + marks);
+
+    // Arrays
+    let fruits = ["Apple", "Banana", "Cherry", 46];
+    document.write("<br>My favorite fruits are: " + fruits.join(", "));
+
+    //conditions
+// let food = prompt("Enter a food item:");
+
+// if (fruits.includes(food)) {
+//     document.write("<br>" + food + " is in the fruits array.");
+// } else {
+//     document.write("<br>" + food + " is not in the fruits array.");
+// }   
+
+
+// Calling the function and displaying the result
+var message = greetings("Alex Okama");
+document.write("<br>" + message);
+
+</script>
+
+<br>
+
+<p id="date"></p>
+<p id="time"></p>
+<p id="DateTime"></p>
+<br>
+<script>
+    var colors = ["Red", "Green", "Blue", "Yellow"];
+    document.write(colors[0] + "<br>"); // Output: Red
+    document.write(colors[1] + "<br>"); // Output: Green
+    var usersDetails = {
+        "Director":
+            {
+                "name": ["Alex", "Okama"], 
+                "age": 30, 
+                "email": {
+                    "Home Email": "alex.okama@example.com",
+                    "Work Email": "alex.okama@work.com"
+                }
+            },
+        "Manager":
+            {
+                "name": ["Ann", "Okama"], 
+                "age": 35, 
+                "email": {
+                    "Home Email": "ann.okama@example.com",
+                    "Work Email": "ann.okama@work.com"
+                }
+            },
+        "Secretary":
+            {
+                "name": ["Dennis", "Otema"], 
+                "age": 28, 
+                "email": {
+                    "Home Email": "dennis.otema@example.com",
+                    "Work Email": "dennis.otema@work.com"
+                }
+            },
+        "Average age": function() {
+            return (this.Director.age + this.Manager.age + this.Secretary.age) / 3;
+        }
+    };
+document.write(usersDetails.Director.name.join(" ") + "<br>"); // Output: Alex Okama
+document.write(usersDetails.Manager.age + "<br>"); // Output: 35
+document.write(usersDetails.Secretary.email["Work Email"] + "<br>"); // Output: dennis.otema@work.com
+document.write("The average age is: " + usersDetails["Average age"]() + "<br>"); // Output: The average age is: 31
+</script>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
