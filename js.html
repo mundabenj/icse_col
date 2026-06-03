@@ -97,6 +97,10 @@ document.write("<br>" + message);
                     "Work Email": "alex.okama@work.com"
                 }
             },
+bio: function() {
+    return "My name is " + this.Director.name.join(" ") + " and I am " + this.Director.age + " years old. I am the Director of the company. My home email is " + this.Director.email["Home Email"] + " and my work email is " + this.Director.email["Work Email"] + ".";
+},
+
         "Manager":
             {
                 "name": ["Ann", "Okama"], 
@@ -123,9 +127,56 @@ document.write(usersDetails.Director.name.join(" ") + "<br>"); // Output: Alex O
 document.write(usersDetails.Manager.age + "<br>"); // Output: 35
 document.write(usersDetails.Secretary.email["Work Email"] + "<br>"); // Output: dennis.otema@work.com
 document.write("The average age is: " + usersDetails["Average age"]() + "<br>"); // Output: The average age is: 31
+document.write("<br>" + usersDetails.bio());
 </script>
 <br>
 <br>
+<script>
+// Loops
+// Number of iterations to be performed as long as the condition is true
+// While loop
+document.write("<h4>While Loop</h4>");
+let i = 7; // Initialize the loop variable
+while (i <= 13) { // Loop condition: continue as long as i is less than or equal to 13
+    document.write(i + "<br>"); // Output the current value of i followed by a line break
+    i+=2; // Increment the loop variable by 2
+}
+// Do-while loop
+document.write("<h4>Do-While Loop</h4>");
+let j = 1; // Initialize the loop variable
+do {
+    document.write(j + "<br>"); // Output the current value of j followed by a line break
+    j+=2; // Increment the loop variable by 2
+} while (j <= 13); // Loop condition: continue as long as j is less than or equal to 13
+
+// For loop
+document.write("<h4>For Loop</h4>");
+for (let k = 12; k <= 23; k+=2) {
+    document.write(k + "<br>"); // Output the current value of k followed by a line break
+}
+
+// for-of loop
+document.write("<h4>For-Of Loop</h4>");
+let languages = ["C++", "Python", "Java", "JavaScript", "HTML"]; // Initialize an array of programming languages
+for (let language of languages) {
+    document.write(language + "<br>"); // Output the current language followed by a line break
+}
+
+// for-in loop
+document.write("<h4>For-In Loop</h4>");
+let user = {
+    name: "Alex Okama",
+    age: 30,
+    email: "alex.okama@example.com"
+};
+
+for (let detail in user) {
+    document.write(detail + ": " + user[detail] + "<br>"); // Output the key and value followed by a line break
+}
+
+
+</script>
+
 <br>
 <br>
 </body>
