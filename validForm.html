@@ -27,34 +27,80 @@
             color: #f70202;
             margin: 0;
         }
+        .success{
+            color: #0f9b0f;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-<form action="" method="" id="registrationForm" class="registration-form">
+<form action="#" method="post" id="registrationForm" class="registration-form">
     <h2>Registration Form</h2>
     <div class="field">
         <label for="fullname">Full Name: </label><br>
         <input type="text" id="fullname" name="fullname" autofocus><br>
+        <p id="fullnameError" class="error"></p>
     </div>
     <div class="field">
         <label for="email">Email: </label><br>
         <input type="email" id="email" name="email"><br>
+        <p id="emailError" class="error"></p>
     </div>
     <div class="field">
         <label for="phone">Phone Number: </label><br>
         <input type="tel" id="phone" name="phone"><br>
+        <p id="phoneError" class="error"></p>
     </div>
     <div class="field">
         <label for="password">Password: </label><br>
         <input type="password" id="password" name="password"><br>
+        <p id="passwordError" class="error"></p>
     </div>
     <div class="field">
         <label for="confirm_password">Confirm Password: </label><br>
         <input type="password" id="confirm_password" name="confirm_password"><br>
+        <p id="confirmPasswordError" class="error"></p>
     </div>
     <div class="field">
         <button type="submit">Register</button>
     </div>
+    <p id="validationMessage" class="success"></p>
 </form>
+
+<script>
+    // JavaScript code to validate the form
+    document.getElementById("registrationForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent the default form submission
+
+      // Clear previous error messages
+      document.getElementById("fullnameError").textContent = '';
+      document.getElementById("emailError").textContent = '';
+      document.getElementById("phoneError").textContent = '';
+      document.getElementById("passwordError").textContent = '';
+      document.getElementById("confirmPasswordError").textContent = '';
+      document.getElementById("validationMessage").textContent = '';
+
+      // Flag to track if the form is valid
+      let isValid = true;
+
+      // Validate Full Name
+      const fullname = document.getElementById("fullname").value.trim();
+      if(fullname === ''){ // Check if the full name is empty
+          document.getElementById("fullnameError").textContent = 'Full Name is required.';
+          isValid = false;
+      }
+
+
+      if(isValid){
+          document.getElementById("validationMessage").textContent = 'Form submitted successfully!';
+          document.getElementById("validationMessage").classList.remove('error');
+          document.getElementById("validationMessage").classList.add('success');
+      }else{
+          document.getElementById("validationMessage").textContent = 'Please correct the error(s) above and try again.';
+          document.getElementById("validationMessage").classList.remove('success');
+          document.getElementById("validationMessage").classList.add('error');
+      }
+    });
+</script>
 </body>
 </html>
