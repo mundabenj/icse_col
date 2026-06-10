@@ -148,6 +148,16 @@
             document.getElementById("passwordError").textContent = 'Password must contain at least one special character.';
             isValid = false;
         }
+        
+        // Confirm Password validation
+        const confirmPassword = document.getElementById("confirm_password").value.trim();
+        if(confirmPassword === ''){ // Check if the confirm password is empty
+            document.getElementById("confirmPasswordError").textContent = 'Confirm Password is required.';
+            isValid = false;
+        }else if(confirmPassword !== password){ // Check if the confirm password matches the password
+            document.getElementById("confirmPasswordError").textContent = 'Passwords do not match.';
+            isValid = false;
+        }
 
       if(isValid){
           document.getElementById("validationMessage").textContent = 'Form submitted successfully!';
