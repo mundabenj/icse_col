@@ -82,13 +82,14 @@ function formValidations() {
 
       // Validate Full Name
       const fullname = document.getElementById("fullname").value.trim();
+      const namePattern = /^[a-zA-Z\s']+$/; // Regular expression to allow only letters, spaces, and apostrophes
       if(fullname === ''){ // Check if the full name is empty
           document.getElementById("fullnameError").textContent = 'Full Name is required.';
           isValid = false;
       }else if(fullname.length < 3){ // Check if the full name is too short
           document.getElementById("fullnameError").textContent = 'Full Name must be at least 3 characters long.';
           isValid = false;
-      }else if(!/^[a-zA-Z\s']+$/.test(fullname)){ // Check if the full name contains only letters, spaces, and apostrophes
+      }else if(!namePattern.test(fullname)){ // Check if the full name contains only letters, spaces, and apostrophes
           document.getElementById("fullnameError").textContent = 'Full Name can only contain letters, spaces, and apostrophes.';
           isValid = false;
       }
@@ -98,11 +99,12 @@ function formValidations() {
       const validDomains = ['gmail.com', 'yahoo.com', 'strathmore.edu', 'o365.strathmore.edu']; // List of valid domains
       const invalidDomains = ['hotmail.com', 'outlook.com', 'aol.com']; // List of invalid domains
       const emailDomain = email.split('@')[1]; // Get the domain part of the email
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for a valid email address
 
       if(email === ''){ // Check if the email is empty
           document.getElementById("emailError").textContent = 'Email is required.';
           isValid = false;
-      }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ // Check if the email is valid
+      }else if(!emailPattern.test(email)){ // Check if the email is valid
           document.getElementById("emailError").textContent = 'Please enter a valid email address.';
           isValid = false;
       }else if(!validDomains.includes(emailDomain)){ // Check if the email domain is valid
