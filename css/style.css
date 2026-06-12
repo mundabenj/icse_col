@@ -164,3 +164,30 @@ tr:hover {
 .contact-form input[type="submit"]:hover {
     background-color: #1f07fd;
 }
+
+        .registration-form{
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .field{
+            margin-bottom: 15px;
+        }
+        input, button{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            font-size: 1.6em;
+            font-family: Arial, sans-serif;
+        }
+        .error{
+            color: #f70202;
+            margin: 0;
+        }
+        .success{
+            color: #0f9b0f;
+            margin: 0;
+        }
